@@ -31,7 +31,20 @@ namespace XamChat.Tests {
 
 		[Test]
 		public void LoginWithNoUsernameOrPassword() {
-			// throws and exception
+			Assert.Throws<AggregateException>(() => loginViewModel.Login().Wait());
+		}
+
+		[Test]
+		public void LoginWithNoUsername() {
+			loginViewModel.Password = "password";
+
+			Assert.Throws<AggregateException>(() => loginViewModel.Login().Wait());
+		}
+
+		[Test]
+		public void LoginWithNoPassword() {
+			loginViewModel.Username = "testuser";
+
 			Assert.Throws<AggregateException>(() => loginViewModel.Login().Wait());
 		}
 	}
