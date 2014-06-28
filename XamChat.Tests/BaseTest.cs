@@ -4,7 +4,7 @@ using XamChat.Core;
 
 namespace XamChat.Tests {
 	[TestFixture()]
-	public class Test {
+	public static class BaseTest {
 
 		public static void SetUp() {
 			ServiceContainer.Register<IWebService>(() => new FakeWebService { SleepDuration = 0 });

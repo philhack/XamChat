@@ -32,12 +32,12 @@
     <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
     <Compile Include="LoginViewModelTests.cs" />
     <Compile Include="MessageViewModelTests.cs" />
     <Compile Include="FriendViewModelTests.cs" />
     <Compile Include="Helpers\LoginTestHelper.cs" />
-    <Compile Include="RegisterViewModel.cs" />
+    <Compile Include="RegisterViewModelTests.cs" />
+    <Compile Include="BaseTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

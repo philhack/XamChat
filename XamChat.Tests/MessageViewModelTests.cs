@@ -11,7 +11,7 @@ namespace XamChat.Tests {
 
 		[SetUp]
 		public void SetUp() {
-			Test.SetUp();
+			BaseTest.SetUp();
 
 			settings = ServiceContainer.Resolve<ISettings>();
 			messageViewModel = new MessageViewModel();

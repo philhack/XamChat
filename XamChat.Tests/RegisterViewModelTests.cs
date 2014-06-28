@@ -10,6 +10,7 @@ namespace XamChat.Tests {
 
 		[SetUp]
 		public void SetUp() {
+			BaseTest.SetUp();
 			settings = ServiceContainer.Resolve<ISettings>();
 			registerViewModel = new RegisterViewModel();
 		}
