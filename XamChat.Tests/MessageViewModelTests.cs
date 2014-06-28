@@ -19,7 +19,7 @@ namespace XamChat.Tests {
 
 		[Test]
 		public void GetConversationsSuccessfully() {
-			SimulateLogin();
+			LoginTestHelper.SimulateLogin(settings);
 
 			messageViewModel.GetConversations().Wait();
 
@@ -34,7 +34,7 @@ namespace XamChat.Tests {
 
 		[Test]
 		public void GetMessagesSuccessfully() {
-			SimulateLogin();
+			LoginTestHelper.SimulateLogin(settings);
 
 			messageViewModel.Conversation = new Conversation();			
 
@@ -51,7 +51,7 @@ namespace XamChat.Tests {
 
 		[Test]
 		public void SendMessage() {
-			SimulateLogin();
+			LoginTestHelper.SimulateLogin(settings);
 
 			messageViewModel.Conversation = new Conversation();
 			messageViewModel.Text = "Hello";
@@ -61,9 +61,7 @@ namespace XamChat.Tests {
 			Assert.That(messageViewModel.Messages, Has.Some.With.Property("Text").EqualTo(messageViewModel.Text));
 		}
 
-		private void SimulateLogin() {
-			settings.User = new User();
-		}
+
 	}
 }
 

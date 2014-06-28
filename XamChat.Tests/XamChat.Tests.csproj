@@ -35,6 +35,8 @@
     <Compile Include="Test.cs" />
     <Compile Include="LoginViewModelTests.cs" />
     <Compile Include="MessageViewModelTests.cs" />
+    <Compile Include="FriendViewModelTests.cs" />
+    <Compile Include="Helpers\LoginTestHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -42,5 +44,8 @@
       <Project>{2303C0F8-FA6B-4D4C-8CA1-A11BAB32A8CC}</Project>
       <Name>XamChat.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
