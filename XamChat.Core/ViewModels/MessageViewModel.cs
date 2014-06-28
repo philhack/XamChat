@@ -25,8 +25,8 @@ namespace XamChat.Core {
 		}
 
 		public async Task GetMessages() {
-			if (Conversations == null)
-				throw new Exception("No conversation.");
+			if (Conversation == null)
+				throw new Exception("No conversation selected.");
 
 			IsBusy = true;
 
@@ -41,7 +41,7 @@ namespace XamChat.Core {
 			if (settings.User == null)
 				throw new Exception("Not logged in.");
 			if (Conversation == null)
-				throw new Exception("No conversation.");
+				throw new Exception("No conversation selected.");
 			if (string.IsNullOrEmpty(Text))
 				throw new Exception("Message is blank.");
 
@@ -53,8 +53,7 @@ namespace XamChat.Core {
 						UserId = settings.User.Id,
 						ConversationId = Conversation.Id,
 						Text = Text
-					}
-				              );
+					});
 
 				// update our local list of messares
 				var messages = new List<Message>();

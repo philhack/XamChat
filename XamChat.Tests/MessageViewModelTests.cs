@@ -25,6 +25,28 @@ namespace XamChat.Tests {
 
 			Assert.That(messageViewModel.Conversations, Is.Not.Empty);
 		}
+
+		[Test]
+		public void GetConversationsWithoutLogin() {
+
+			Assert.Throws<AggregateException>(() => messageViewModel.GetConversations().Wait());
+		}
+
+		[Test]
+		public void GetMessagesSuccessfully() {
+			//SimulateLogin();
+			settings.User = new User();
+
+			messageViewModel.Conversation = new Conversation();			
+
+			messageViewModel.GetMessages().Wait();
+
+			Assert.That(messageViewModel.Messages, Is.Not.Empty);
+		}
+
+		private void SimulateLogin() {
+			settings.User = new User();
+		}
 	}
 }
 
