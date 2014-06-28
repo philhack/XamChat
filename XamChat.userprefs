@@ -1,28 +1,29 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamChat.Core/ViewModels/MessageViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamChat.Tests/RegisterViewModel.cs">
     <Files>
       <File FileName="XamChat.Core/Fakes/FakeWebService.cs" Line="93" Column="3" />
-      <File FileName="XamChat.Core/Interfaces/ISettings.cs" Line="9" Column="15" />
+      <File FileName="XamChat.Core/Interfaces/ISettings.cs" Line="7" Column="3" />
       <File FileName="XamChat.Core/Fakes/FakeSettings.cs" Line="8" Column="4" />
       <File FileName="XamChat.Core/Infrastucture/ServiceContainer.cs" Line="5" Column="38" />
       <File FileName="XamChat.Core/ViewModels/BaseViewModel.cs" Line="16" Column="20" />
       <File FileName="XamChat.Core/ViewModels/LoginViewModel.cs" Line="5" Column="41" />
       <File FileName="XamChat.Core/ViewModels/RegisterViewModel.cs" Line="30" Column="20" />
       <File FileName="XamChat.Core/ViewModels/FriendViewModel.cs" Line="9" Column="21" />
-      <File FileName="XamChat.Core/ViewModels/MessageViewModel.cs" Line="62" Column="5" />
+      <File FileName="XamChat.Core/ViewModels/MessageViewModel.cs" Line="53" Column="33" />
+      <File FileName="XamChat.Tests/Test.cs" Line="14" Column="2" />
+      <File FileName="XamChat.Tests/LoginViewModelTests.cs" Line="29" Column="44" />
+      <File FileName="XamChat.Tests/MessageViewModelTests.cs" Line="54" Column="42" />
+      <File FileName="XamChat.Core/Models/Conversation.cs" Line="6" Column="2" />
+      <File FileName="XamChat.Tests/FriendViewModelTests.cs" Line="36" Column="4" />
+      <File FileName="XamChat.Tests/Helpers/LoginTestHelper.cs" Line="7" Column="31" />
+      <File FileName="XamChat.Tests/RegisterViewModel.cs" Line="37" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="XamChat.Core" expanded="True">
-            <Node name="Fakes" expanded="True" />
-            <Node name="Infrastucture" expanded="True" />
-            <Node name="Interfaces" expanded="True" />
-            <Node name="Models" expanded="True" />
-            <Node name="ViewModels" expanded="True" />
-          </Node>
-          <Node name="XamChat.Tests" expanded="True" selected="True" />
+          <Node name="XamChat.iOS" expanded="True" selected="True" />
+          <Node name="XamChat.Tests" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
