@@ -28,5 +28,11 @@ namespace XamChat.Tests {
 
 			Assert.That(settings.User, Is.Not.Null);
 		}
+
+		[Test]
+		public void LoginWithNoUsernameOrPassword() {
+			// throws and exception
+			Assert.Throws<AggregateException>(() => loginViewModel.Login().Wait());
+		}
 	}
 }
