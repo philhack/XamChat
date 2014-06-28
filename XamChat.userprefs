@@ -1,6 +1,38 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamChat.Core/ViewModels/MessageViewModel.cs">
+    <Files>
+      <File FileName="XamChat.Core/Fakes/FakeWebService.cs" Line="93" Column="3" />
+      <File FileName="XamChat.Core/Interfaces/ISettings.cs" Line="9" Column="15" />
+      <File FileName="XamChat.Core/Fakes/FakeSettings.cs" Line="8" Column="4" />
+      <File FileName="XamChat.Core/Infrastucture/ServiceContainer.cs" Line="5" Column="38" />
+      <File FileName="XamChat.Core/ViewModels/BaseViewModel.cs" Line="16" Column="20" />
+      <File FileName="XamChat.Core/ViewModels/LoginViewModel.cs" Line="5" Column="41" />
+      <File FileName="XamChat.Core/ViewModels/RegisterViewModel.cs" Line="30" Column="20" />
+      <File FileName="XamChat.Core/ViewModels/FriendViewModel.cs" Line="9" Column="21" />
+      <File FileName="XamChat.Core/ViewModels/MessageViewModel.cs" Line="62" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="XamChat.Core" expanded="True">
+            <Node name="Fakes" expanded="True" />
+            <Node name="Infrastucture" expanded="True" />
+            <Node name="Interfaces" expanded="True" />
+            <Node name="Models" expanded="True" />
+            <Node name="ViewModels" expanded="True" />
+          </Node>
+          <Node name="XamChat.Tests" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
