@@ -41,6 +41,7 @@
     <Compile Include="Interfaces\ISettings.cs" />
     <Compile Include="Fakes\FakeSettings.cs" />
     <Compile Include="Infrastucture\ServiceContainer.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -48,5 +49,6 @@
     <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Infrastucture\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
