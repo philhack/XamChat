@@ -40,11 +40,13 @@
     <Compile Include="Interfaces\IWebService.cs" />
     <Compile Include="Interfaces\ISettings.cs" />
     <Compile Include="Fakes\FakeSettings.cs" />
+    <Compile Include="Infrastucture\ServiceContainer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Fakes\" />
     <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Infrastucture\" />
   </ItemGroup>
 </Project>
