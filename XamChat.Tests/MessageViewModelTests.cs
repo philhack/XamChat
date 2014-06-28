@@ -19,7 +19,7 @@ namespace XamChat.Tests {
 
 		[Test]
 		public void GetConversationsSuccessfully() {
-			settings.User = new User();		// simulating login
+			SimulateLogin();
 
 			messageViewModel.GetConversations().Wait();
 
@@ -34,14 +34,31 @@ namespace XamChat.Tests {
 
 		[Test]
 		public void GetMessagesSuccessfully() {
-			//SimulateLogin();
-			settings.User = new User();
+			SimulateLogin();
 
 			messageViewModel.Conversation = new Conversation();			
 
 			messageViewModel.GetMessages().Wait();
 
 			Assert.That(messageViewModel.Messages, Is.Not.Empty);
+		}
+
+		[Test]
+		public void GetMessagesWithoutConversation() {
+			Assert.Throws<AggregateException>(() => messageViewModel.GetMessages().Wait());
+		}
+
+
+		[Test]
+		public void SendMessage() {
+			SimulateLogin();
+
+			messageViewModel.Conversation = new Conversation();
+			messageViewModel.Text = "Hello";
+
+			messageViewModel.SendMessage().Wait();
+
+			Assert.That(messageViewModel.Messages, Has.Some.With.Property("Text").EqualTo(messageViewModel.Text));
 		}
 
 		private void SimulateLogin() {
