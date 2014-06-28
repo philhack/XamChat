@@ -37,6 +37,7 @@
     <Compile Include="MessageViewModelTests.cs" />
     <Compile Include="FriendViewModelTests.cs" />
     <Compile Include="Helpers\LoginTestHelper.cs" />
+    <Compile Include="RegisterViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
