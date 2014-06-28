@@ -13,7 +13,7 @@ namespace XamChat.Core {
 		public string Text { get; set; }
 
 		public async Task GetConversations() {
-			if (settings.User = null)
+			if (settings.User == null)
 				throw new Exception("Not logged in.");
 
 			IsBusy = true;
