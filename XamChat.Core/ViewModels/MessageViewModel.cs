@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 namespace XamChat.Core {
-	public class MessageViewModdel : BaseViewModel {
+	public class MessageViewModel : BaseViewModel {
 		public Conversation[] Conversations { get; set; }
 
 		public Conversation Conversation { get; set; }
