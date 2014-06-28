@@ -38,6 +38,8 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Fakes\FakeWebService.cs" />
     <Compile Include="Interfaces\IWebService.cs" />
+    <Compile Include="Interfaces\ISettings.cs" />
+    <Compile Include="Fakes\FakeSettings.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
