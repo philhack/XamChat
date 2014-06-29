@@ -19,7 +19,8 @@ namespace XamChat.Core {
 
 			return new User() {
 				Id = 1,
-				Username = username
+				Username = username,
+				Password = password
 			};
 		}
 
