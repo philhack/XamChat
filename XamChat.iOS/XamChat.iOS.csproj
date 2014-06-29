@@ -147,6 +147,10 @@
     <Compile Include="LoginController.designer.cs">
       <DependentUpon>LoginController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConversationsController.cs" />
+    <Compile Include="ConversationsController.designer.cs">
+      <DependentUpon>ConversationsController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
