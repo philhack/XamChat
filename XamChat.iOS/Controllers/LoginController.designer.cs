@@ -16,7 +16,7 @@ namespace XamChat.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIActivityIndicatorView indicatorActivity { get; set; }
+		UIActivityIndicatorView indicator { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -32,9 +32,9 @@ namespace XamChat.iOS
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (indicatorActivity != null) {
-				indicatorActivity.Dispose ();
-				indicatorActivity = null;
+			if (indicator != null) {
+				indicator.Dispose ();
+				indicator = null;
 			}
 			if (login != null) {
 				login.Dispose ();

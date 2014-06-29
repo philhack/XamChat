@@ -30,5 +30,24 @@ namespace XamChat.iOS {
 				}
 			};
 		}
+
+		public override void ViewWillAppear(bool animated) {
+			base.ViewWillAppear(animated);
+
+			loginViewModel.IsBusyChanged += OnIsBusyChanged;
+		}
+
+		public override void ViewWillDisappear(bool animated) {
+			base.ViewWillDisappear(animated);
+
+			loginViewModel.IsBusyChanged -= OnIsBusyChanged;
+		}
+
+		private void OnIsBusyChanged(object sender, EventArgs e) {
+			username.Enabled =
+				password.Enabled =
+					login.Enabled = 
+						indicator.Hidden = !loginViewModel.IsBusy;
+		}
 	}
 }

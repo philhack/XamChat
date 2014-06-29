@@ -58,7 +58,7 @@
                         <outlet property="login" destination="17" id="name-outlet-17"/>
                         <outlet property="username" destination="13" id="name-outlet-13"/>
                         <outlet property="password" destination="14" id="name-outlet-14"/>
-                        <outlet property="indicatorActivity" destination="18" id="name-outlet-18"/>
+                        <outlet property="indicator" destination="18" id="name-outlet-18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" userLabel="First Responder" sceneMemberID="firstResponder"/>
