@@ -3,11 +3,9 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.CodeDom.Compiler;
 using XamChat.Core;
-using System.Runtime.Remoting.Messaging;
-using System.Runtime.Remoting.Channels;
 
 namespace XamChat.iOS {
-	public partial class LoginController : UIViewController {
+	partial class LoginController : UIViewController {
 		readonly LoginViewModel loginViewModel = ServiceContainer.Resolve<LoginViewModel>();
 
 		public LoginController(IntPtr handle)
@@ -49,5 +47,6 @@ namespace XamChat.iOS {
 					login.Enabled = 
 						indicator.Hidden = !loginViewModel.IsBusy;
 		}
+
 	}
 }

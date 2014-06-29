@@ -101,10 +101,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\LoginController.designer.cs">
-      <DependentUpon>LoginController.cs</DependentUpon>
-    </Compile>
     <Compile Include="..\XamChat.Core\Fakes\FakeSettings.cs">
       <Link>Core\Fakes\FakeSettings.cs</Link>
     </Compile>
@@ -146,6 +142,10 @@
     </Compile>
     <Compile Include="..\XamChat.Core\Models\User.cs">
       <Link>Core\Models\User.cs</Link>
+    </Compile>
+    <Compile Include="LoginController.cs" />
+    <Compile Include="LoginController.designer.cs">
+      <DependentUpon>LoginController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
