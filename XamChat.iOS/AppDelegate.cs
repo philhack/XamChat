@@ -4,6 +4,7 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using XamChat.Core;
 
 namespace XamChat.iOS {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -34,7 +35,17 @@ namespace XamChat.iOS {
 		public override void WillTerminate(UIApplication application) {
 		}
 
+		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions) {
 
+			ServiceContainer.Register<LoginViewModel>(() => new LoginViewModel());
+			ServiceContainer.Register<FriendViewModel>(() => new FriendViewModel());
+			ServiceContainer.Register<RegisterViewModel>(() => new RegisterViewModel());
+			ServiceContainer.Register<MessageViewModel>(() => new MessageViewModel());
+
+			ServiceContainer.Register<ISettings>(() => new FakeSettings());
+			ServiceContainer.Register<IWebService>(() => new FakeWebService());
+			return true;
+		}
 	}
 }
 
