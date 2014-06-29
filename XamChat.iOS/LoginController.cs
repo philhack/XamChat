@@ -22,7 +22,7 @@ namespace XamChat.iOS {
 				try {
 					await loginViewModel.Login();
 
-					// TODO: nagivate to a new screen
+					PerformSegue("OnLogin", this);	// navigates to the next screen via a Seque (the ConversationsController)
 				} catch (Exception ex) {
 					new UIAlertView("Oops!", ex.Message, null, "Ok").Show();
 				}
