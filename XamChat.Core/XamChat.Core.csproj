@@ -55,4 +55,9 @@
     <Folder Include="Infrastucture\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="ViewModels\MainStoryboard.storyboard">
+      <DependentUpon>RegisterViewModel.cs</DependentUpon>
+    </InterfaceDefinition>
+  </ItemGroup>
 </Project>

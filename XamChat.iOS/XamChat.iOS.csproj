@@ -143,26 +143,23 @@
     <Compile Include="..\XamChat.Core\Models\User.cs">
       <Link>Core\Models\User.cs</Link>
     </Compile>
-    <Compile Include="LoginController.cs" />
-    <Compile Include="LoginController.designer.cs">
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LoginController.designer.cs">
       <DependentUpon>LoginController.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConversationsController.cs" />
-    <Compile Include="ConversationsController.designer.cs">
+    <Compile Include="Controllers\ConversationsController.cs" />
+    <Compile Include="Controllers\ConversationsController.designer.cs">
       <DependentUpon>ConversationsController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="MainStoryboard.storyboard" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Core\" />
     <Folder Include="Core\Fakes\" />
     <Folder Include="Core\Infrastucture\" />
     <Folder Include="Core\Interfaces\" />
     <Folder Include="Core\ViewModels\" />
     <Folder Include="Core\Models\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>
