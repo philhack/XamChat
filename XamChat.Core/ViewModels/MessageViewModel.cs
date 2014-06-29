@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace XamChat.Core {
 	public class MessageViewModel : BaseViewModel {
-		public Conversation[] Conversations { get; set; }
+		public Conversation[] Conversations { get; private set; }
 
 		public Conversation Conversation { get; set; }
 
-		public Message[] Messages { get; set; }
+		public Message[] Messages { get; private set; }
 
 		public string Text { get; set; }
 

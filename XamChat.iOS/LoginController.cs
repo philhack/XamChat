@@ -5,7 +5,7 @@ using System.CodeDom.Compiler;
 using XamChat.Core;
 
 namespace XamChat.iOS {
-	partial class LoginController : UIViewController {
+	public partial class LoginController : UIViewController {
 		readonly LoginViewModel loginViewModel = ServiceContainer.Resolve<LoginViewModel>();
 
 		public LoginController(IntPtr handle)

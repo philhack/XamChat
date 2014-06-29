@@ -3,9 +3,10 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.CodeDom.Compiler;
 using XamChat.Core;
+using MonoTouch.CoreText;
 
 namespace XamChat.iOS {
-	partial class ConversationsController : UITableViewController {
+	public partial class ConversationsController : UITableViewController {
 		readonly MessageViewModel messageViewModel = ServiceContainer.Resolve<MessageViewModel>();
 
 		public ConversationsController(IntPtr handle)
@@ -15,7 +16,7 @@ namespace XamChat.iOS {
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 
-			TableView.Source = new TableSource();
+			TableView.Source = new TableSource(this);
 		}
 
 		public async override void ViewWillAppear(bool animated) {
@@ -32,6 +33,11 @@ namespace XamChat.iOS {
 		class TableSource : UITableViewSource {
 			const string CellName = "ConversationCell";
 			readonly MessageViewModel messageViewModel = ServiceContainer.Resolve<MessageViewModel>();
+			readonly ConversationsController controller;
+
+			public TableSource(ConversationsController controller) {
+				this.controller = controller;
+			}
 
 			public override int RowsInSection(UITableView tableView, int section) {
 				// return the number of conversations found in the view model
