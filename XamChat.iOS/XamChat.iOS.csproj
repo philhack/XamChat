@@ -105,6 +105,48 @@
     <Compile Include="Controllers\LoginController.designer.cs">
       <DependentUpon>LoginController.cs</DependentUpon>
     </Compile>
+    <Compile Include="..\XamChat.Core\Fakes\FakeSettings.cs">
+      <Link>Core\Fakes\FakeSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Fakes\FakeWebService.cs">
+      <Link>Core\Fakes\FakeWebService.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Infrastucture\ServiceContainer.cs">
+      <Link>Core\Infrastucture\ServiceContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Interfaces\ISettings.cs">
+      <Link>Core\Interfaces\ISettings.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Interfaces\IWebService.cs">
+      <Link>Core\Interfaces\IWebService.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\ViewModels\BaseViewModel.cs">
+      <Link>Core\ViewModels\BaseViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\ViewModels\FriendViewModel.cs">
+      <Link>Core\ViewModels\FriendViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\ViewModels\LoginViewModel.cs">
+      <Link>Core\ViewModels\LoginViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\ViewModels\MessageViewModel.cs">
+      <Link>Core\ViewModels\MessageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\ViewModels\RegisterViewModel.cs">
+      <Link>Core\ViewModels\RegisterViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Models\Conversation.cs">
+      <Link>Core\Models\Conversation.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Models\Message.cs">
+      <Link>Core\Models\Message.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Models\MyClass.cs">
+      <Link>Core\Models\MyClass.cs</Link>
+    </Compile>
+    <Compile Include="..\XamChat.Core\Models\User.cs">
+      <Link>Core\Models\User.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
@@ -112,5 +154,11 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Fakes\" />
+    <Folder Include="Core\Infrastucture\" />
+    <Folder Include="Core\Interfaces\" />
+    <Folder Include="Core\ViewModels\" />
+    <Folder Include="Core\Models\" />
   </ItemGroup>
 </Project>
