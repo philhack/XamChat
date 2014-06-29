@@ -25,5 +25,6 @@ _ReSharper*/
 *.stresult
 *.DotSettings
 packages*/
+*.DS_Store
 *.exe
 !NuGet.exe
