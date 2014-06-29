@@ -14,8 +14,40 @@ namespace XamChat.iOS
 	[Register ("LoginController")]
 	partial class LoginController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIActivityIndicatorView indicatorActivity { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton login { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField password { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField username { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (indicatorActivity != null) {
+				indicatorActivity.Dispose ();
+				indicatorActivity = null;
+			}
+			if (login != null) {
+				login.Dispose ();
+				login = null;
+			}
+			if (password != null) {
+				password.Dispose ();
+				password = null;
+			}
+			if (username != null) {
+				username.Dispose ();
+				username = null;
+			}
 		}
 	}
 }

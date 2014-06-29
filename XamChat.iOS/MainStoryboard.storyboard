@@ -21,7 +21,7 @@
         </scene>
         <scene sceneID="7">
             <objects>
-                <viewController id="4" sceneMemberID="viewController">
+                <viewController id="4" sceneMemberID="viewController" customClass="LoginController">
                     <view key="view" contentMode="scaleToFill" id="9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,9 +55,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="XamChat" id="8" customClass="LoginController"/>
                     <connections>
-                        <outlet property="LoginButton" destination="17" id="name-outlet-17"/>
-                        <outlet property="usernameText" destination="13" id="name-outlet-13"/>
-                        <outlet property="passwordText" destination="14" id="name-outlet-14"/>
+                        <outlet property="login" destination="17" id="name-outlet-17"/>
+                        <outlet property="username" destination="13" id="name-outlet-13"/>
+                        <outlet property="password" destination="14" id="name-outlet-14"/>
                         <outlet property="indicatorActivity" destination="18" id="name-outlet-18"/>
                     </connections>
                 </viewController>
