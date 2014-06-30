@@ -14,7 +14,6 @@ namespace XamChat.Droid {
     [Application(Theme = "@android:style/Theme.Holo.Light")]
     public class Application : Android.App.Application {
         protected Application(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer) {
-
         }
 
         public override void OnCreate() {

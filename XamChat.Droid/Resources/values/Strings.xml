@@ -3,4 +3,5 @@
     <string name="ApplicationName">XamChat</string>
     <string name="ErrorTitle">Oops!</string>
     <string name="Loading">Loading</string>
+    <string name="Hello">Hello Fun!</string>
 </resources>
