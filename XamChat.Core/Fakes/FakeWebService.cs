@@ -49,9 +49,9 @@ namespace XamChat.Core {
 			await Sleep();
 
 			return new [] {
-				new Conversation{ Id = 1, UserId = 2 },
-				new Conversation{ Id = 1, UserId = 3 },
-				new Conversation{ Id = 1, UserId = 4 }
+				new Conversation{ Id = 1, UserId = 2, Username = "jimbo", LastMessage = "Hi" },
+				new Conversation{ Id = 1, UserId = 3, Username = "frow", LastMessage = "Whazup?"},
+				new Conversation{ Id = 1, UserId = 4, Username = "minme", LastMessage = "Did you see that movie?" }
 			};
 		}
 

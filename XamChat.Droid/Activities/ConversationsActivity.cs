@@ -72,7 +72,7 @@ namespace XamChat.Droid.Activities {
                 var username = convertView.FindViewById<TextView>(Resource.Id.conversationUsername);
                 var lastMessage = convertView.FindViewById<TextView>(Resource.Id.conversationLastMessage);
                 username.Text = conversation.Username;
-                lastMessage.Text = conversation.LastMessage; // TODO: need to populate last message
+                lastMessage.Text = conversation.LastMessage;
                 return convertView;
             }
 
