@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.Droid", "XamChat.Droid\XamChat.Droid.csproj", "{6EEB6DDD-D214-4379-85B3-AA2C2231EA61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamChat.Core", "XamChat.Core\XamChat.Core.csproj", "{2303C0F8-FA6B-4D4C-8CA1-A11BAB32A8CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6EEB6DDD-D214-4379-85B3-AA2C2231EA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EEB6DDD-D214-4379-85B3-AA2C2231EA61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6EEB6DDD-D214-4379-85B3-AA2C2231EA61}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2303C0F8-FA6B-4D4C-8CA1-A11BAB32A8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2303C0F8-FA6B-4D4C-8CA1-A11BAB32A8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2303C0F8-FA6B-4D4C-8CA1-A11BAB32A8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2303C0F8-FA6B-4D4C-8CA1-A11BAB32A8CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
