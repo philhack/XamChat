@@ -9,5 +9,7 @@ namespace XamChat.Core {
 		public int UserId { get; set; }
 
 		public string Username { get; set; }
+
+        public string LastMessage { get; set; }
 	}
 }
