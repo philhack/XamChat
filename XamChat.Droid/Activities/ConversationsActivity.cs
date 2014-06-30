@@ -13,10 +13,31 @@ using XamChat.Core;
 namespace XamChat.Droid.Activities {
     [Activity(Label = "Conversations")]
     public class ConversationsActivity : BaseActivity<MessageViewModel> {
+        private ListView _listView;
+        private Adapter _adapter;
+
+        /*
+             This code will set up the adapter and reload our list of conversations when the activity appears on screen. 
+             Note that we called NotifyDataSetInvalidated here so that ListView reloads its rows after the number 
+             of conversations has been updated.
+        */
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
 
-            // Create your application here
+            SetContentView(Resource.Layout.Conversations);
+            _listView = FindViewById<ListView>(Resource.Id.conversationsList);
+            _listView.Adapter = _adapter = new Adapter(this);
+        }
+
+        protected override async void OnResume() {
+            base.OnResume();
+            try {
+                await viewModel.GetConversations();
+                _adapter.NotifyDataSetInvalidated();
+            }
+            catch (Exception ex) {
+                DisplayError(ex);
+            }
         }
 
         /*
@@ -31,32 +52,27 @@ namespace XamChat.Droid.Activities {
             - We implemented an indexer to return a Conversation object for a position.
          */
 
-        class Adapter : BaseAdapter<Conversation>
-        {
+        private class Adapter : BaseAdapter<Conversation> {
             private readonly MessageViewModel messageViewModel = ServiceContainer.Resolve<MessageViewModel>();
             private readonly LayoutInflater inflater;
 
-            public Adapter(Context context)
-            {
-                inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
+            public Adapter(Context context) {
+                inflater = (LayoutInflater) context.GetSystemService(Context.LayoutInflaterService);
             }
 
-            public override long GetItemId(int position)
-            {
+            public override long GetItemId(int position) {
                 return messageViewModel.Conversations[position].Id;
             }
 
-            public override View GetView(int position, View convertView, ViewGroup parent)
-            {
-                if (convertView == null)
-                {
+            public override View GetView(int position, View convertView, ViewGroup parent) {
+                if (convertView == null) {
                     convertView = inflater.Inflate(Resource.Layout.ConversationListItem, null);
                 }
                 var conversation = this[position];
                 var username = convertView.FindViewById<TextView>(Resource.Id.conversationUsername);
                 var lastMessage = convertView.FindViewById<TextView>(Resource.Id.conversationLastMessage);
                 username.Text = conversation.Username;
-                lastMessage.Text = conversation.LastMessage;    // TODO: need to populate last message
+                lastMessage.Text = conversation.LastMessage; // TODO: need to populate last message
                 return convertView;
             }
 
@@ -64,9 +80,8 @@ namespace XamChat.Droid.Activities {
                 get { return messageViewModel.Conversations == null ? 0 : messageViewModel.Conversations.Length; }
             }
 
-            public override Conversation this[int index]
-            {
-                get { return messageViewModel.Conversations [index]; }
+            public override Conversation this[int index] {
+                get { return messageViewModel.Conversations[index]; }
             }
         }
     }
