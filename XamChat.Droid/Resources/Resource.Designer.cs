@@ -63,23 +63,26 @@ namespace XamChat.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int conversationLastMessage = 2131099649;
+			// aapt resource value: 0x7f070006
+			public const int addFriendMenu = 2131165190;
 			
-			// aapt resource value: 0x7f060000
-			public const int conversationUsername = 2131099648;
+			// aapt resource value: 0x7f070001
+			public const int conversationLastMessage = 2131165185;
 			
-			// aapt resource value: 0x7f060002
-			public const int conversationsList = 2131099650;
+			// aapt resource value: 0x7f070000
+			public const int conversationUsername = 2131165184;
 			
-			// aapt resource value: 0x7f060005
-			public const int login = 2131099653;
+			// aapt resource value: 0x7f070002
+			public const int conversationsList = 2131165186;
 			
-			// aapt resource value: 0x7f060004
-			public const int password = 2131099652;
+			// aapt resource value: 0x7f070005
+			public const int login = 2131165189;
 			
-			// aapt resource value: 0x7f060003
-			public const int username = 2131099651;
+			// aapt resource value: 0x7f070004
+			public const int password = 2131165188;
+			
+			// aapt resource value: 0x7f070003
+			public const int username = 2131165187;
 			
 			static Id()
 			{
@@ -109,6 +112,22 @@ namespace XamChat.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int ConversationsMenu = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

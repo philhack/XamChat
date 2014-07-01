@@ -21,6 +21,7 @@ namespace XamChat.Droid.Activities {
              Note that we called NotifyDataSetInvalidated here so that ListView reloads its rows after the number 
              of conversations has been updated.
         */
+
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
 
@@ -38,6 +39,21 @@ namespace XamChat.Droid.Activities {
             catch (Exception ex) {
                 DisplayError(ex);
             }
+        }
+
+
+        // display the menu item
+        public override bool OnCreateOptionsMenu(IMenu menu) {
+            MenuInflater.Inflate(Resource.Menu.ConversationsMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        // apply it to the menu at the top in our activity's action bar.
+        public override bool OnOptionsItemSelected(IMenuItem item) {
+            if (item.ItemId == Resource.Id.addFriendMenu) {
+                // TODO: Launch the next activity
+            }
+            return base.OnOptionsItemSelected(item);
         }
 
         /*
