@@ -63,8 +63,8 @@ namespace XamChat.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070006
-			public const int addFriendMenu = 2131165190;
+			// aapt resource value: 0x7f070008
+			public const int addFriendMenu = 2131165192;
 			
 			// aapt resource value: 0x7f070001
 			public const int conversationLastMessage = 2131165185;
@@ -75,14 +75,20 @@ namespace XamChat.Droid
 			// aapt resource value: 0x7f070002
 			public const int conversationsList = 2131165186;
 			
-			// aapt resource value: 0x7f070005
-			public const int login = 2131165189;
+			// aapt resource value: 0x7f070003
+			public const int friendName = 2131165187;
 			
 			// aapt resource value: 0x7f070004
-			public const int password = 2131165188;
+			public const int friendsList = 2131165188;
 			
-			// aapt resource value: 0x7f070003
-			public const int username = 2131165187;
+			// aapt resource value: 0x7f070007
+			public const int login = 2131165191;
+			
+			// aapt resource value: 0x7f070006
+			public const int password = 2131165190;
+			
+			// aapt resource value: 0x7f070005
+			public const int username = 2131165189;
 			
 			static Id()
 			{
@@ -104,7 +110,13 @@ namespace XamChat.Droid
 			public const int Conversations = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Login = 2130903042;
+			public const int FriendListItem = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Friends = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int Login = 2130903044;
 			
 			static Layout()
 			{

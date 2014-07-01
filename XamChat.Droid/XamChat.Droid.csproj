@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Activities\BaseActivity.cs" />
     <Compile Include="Activities\ConversationsActivity.cs" />
+    <Compile Include="Activities\FriendsActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -76,6 +77,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Friends.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\FriendListItem.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
