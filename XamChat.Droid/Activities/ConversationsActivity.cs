@@ -51,7 +51,7 @@ namespace XamChat.Droid.Activities {
         // apply it to the menu at the top in our activity's action bar.
         public override bool OnOptionsItemSelected(IMenuItem item) {
             if (item.ItemId == Resource.Id.addFriendMenu) {
-                // TODO: Launch the next activity
+                StartActivity(typeof(FriendsActivity));
             }
             return base.OnOptionsItemSelected(item);
         }
