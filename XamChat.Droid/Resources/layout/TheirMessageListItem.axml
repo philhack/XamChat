@@ -9,14 +9,14 @@
         android:text="Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/myMessageText"
+        android:id="@+id/theirMessageText"
         android:layout_margin="3dp"
         android:textColor="@android:color/holo_green_light" />
     <TextView
         android:text="Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/myMessageDate"
+        android:id="@+id/theirMessageDate"
         android:layout_margin="3dp"
-        android:alighnParentRight="true" />
+        android:layout_alignParentRight="true" />
 </RelativeLayout>

@@ -63,25 +63,29 @@ namespace XamChat.Core {
 					Id = 1,
 					ConversationId = conversationId,
 					UserId = 2,
-					Text = "Hey"
+					Text = "Hey",
+                    Date = DateTime.Now
 				},
 				new Message {
 					Id = 2,
 					ConversationId = conversationId,
 					UserId = 1,
-					Text = "What's up?"
+					Text = "What's up?",
+                    Date = DateTime.Now;
 				},
 				new Message {
 					Id = 3,
 					ConversationId = conversationId,
 					UserId = 2,
-					Text = "Have you seen that new movie?"
+					Text = "Have you seen that new movie?",
+                    Date = DateTime.Now
 				},
 				new Message {
 					Id = 4,
 					ConversationId = conversationId,
 					UserId = 1,
-					Text = "Ya, it's fantastic!"
+					Text = "Ya, it's fantastic!",
+                    Date = DateTime.Now
 				} 
 			};
 		}

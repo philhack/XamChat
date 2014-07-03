@@ -57,6 +57,7 @@
     <Compile Include="Activities\ConversationsActivity.cs" />
     <Compile Include="Activities\FriendsActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\MessagesActivity.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

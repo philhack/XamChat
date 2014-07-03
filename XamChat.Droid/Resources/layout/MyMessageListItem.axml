@@ -18,5 +18,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/myMessageDate"
         android:layout_margin="3dp"
-        android:alighnParentRight="true" />
+        android:layout_alignParentRight="true" />
 </RelativeLayout>
