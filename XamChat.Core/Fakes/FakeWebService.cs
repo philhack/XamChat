@@ -71,7 +71,7 @@ namespace XamChat.Core {
 					ConversationId = conversationId,
 					UserId = 1,
 					Text = "What's up?",
-                    Date = DateTime.Now;
+                    Date = DateTime.Now
 				},
 				new Message {
 					Id = 3,

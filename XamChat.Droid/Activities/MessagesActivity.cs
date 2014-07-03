@@ -15,10 +15,13 @@ using Message = XamChat.Core.Message;
 namespace XamChat.Droid.Activities {
     [Activity(Label = "Messages")]
     public class MessagesActivity : Activity {
+        private ListView listView;
+        private EditText messageText;
+        private Button sendButton;
+        private Adapter adapter;
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
         }
-
 
         private class Adapter : BaseAdapter<Message> {
             private readonly MessageViewModel _messageViewModel = ServiceContainer.Resolve<MessageViewModel>();
@@ -36,6 +39,19 @@ namespace XamChat.Droid.Activities {
                 return _messageViewModel.Messages[position].Id;
             }
 
+
+            /* 
+             Let's break down our implementation through the following steps:
+                1. We first pull out the message object for the position of the row.
+                2. Next, we grab the view type that determines whether it is the current user's
+                message or the other user in the conversation.
+                3. If convertView is null, we inflate the appropriate layout based on the type.
+                4. Next, we pull the two text views, messageText and dateText, out of
+                convertView. We have to use the type value to make sure we use the correct
+                resource IDs.
+                5. We set the appropriate text on both text views using the message object.
+                6. We return convertView.
+             */
             public override View GetView(int position, View convertView, ViewGroup parent)
             {
                 var message = this[position];
