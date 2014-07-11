@@ -14,13 +14,47 @@ using Message = XamChat.Core.Message;
 
 namespace XamChat.Droid.Activities {
     [Activity(Label = "Messages")]
-    public class MessagesActivity : Activity {
+    public class MessagesActivity : BaseActivity<MessageViewModel> {
         private ListView listView;
         private EditText messageText;
         private Button sendButton;
         private Adapter adapter;
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
+            Title = viewModel.Conversation.Username;
+            SetContentView(Resource.Layout.Messages);
+            listView = FindViewById<ListView>(Resource.Id.messageList);
+            messageText = FindViewById<EditText>(Resource.Id.messageText);
+            sendButton = FindViewById<Button>(Resource.Id.sendButton);
+
+            listView.Adapter = adapter = new Adapter(this);
+
+            sendButton.Click += async (sender, e) => {
+                viewModel.Text = messageText.Text;
+                try {
+                    await viewModel.SendMessage();
+                    messageText.Text = string.Empty;
+                    adapter.NotifyDataSetInvalidated();
+                    listView.SetSelection(adapter.Count);
+                }
+                catch (Exception ex) {
+                    DisplayError(ex);
+                }
+            };
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            try {
+                //await viewModel.GetMessages();   // await not resolving???
+                viewModel.GetMessages();
+                adapter.NotifyDataSetInvalidated();
+                listView.SetSelection(adapter.Count);
+            }
+            catch (Exception ex) {
+                DisplayError(ex);
+            }
         }
 
         private class Adapter : BaseAdapter<Message> {
